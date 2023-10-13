@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rafmorei <djmaelreborn@gmail.com>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/12 22:05:02 by rafmorei          #+#    #+#             */
+/*   Updated: 2023/10/12 22:05:02 by rafmorei         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -57,7 +69,7 @@ char *ft_strjoin(char *s1, char *s2, char *sep)
 
     all_size = ft_strlen(s1) + ft_strlen(s2);
     result = (char *)malloc((all_size + 1) * sizeof(char));
-    if (!result) // malloc error check
+    if (!result)
         return (result);
 
     index = 0;
@@ -85,7 +97,7 @@ int main()
 {
     char *str_prefix = "itk";
     char *str_suffix = "sonraki";
-    char *sep = "r";
+    char *sep = "#";
     printf("%s\n", ft_strjoin(str_prefix, str_suffix, sep));
     return (0);
 }
